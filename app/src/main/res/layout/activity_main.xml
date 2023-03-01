@@ -4,31 +4,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        <EditText
-            android:id="@+id/editTextPrompt"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="20dp"/>
-        <Button
-            android:id="@+id/buttonGenerate"
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Generate"
-            android:layout_gravity="right"
-            android:layout_marginRight="30dp"/>
+            android:layout_gravity="center_horizontal"
+            android:hint="Enter prompt"
+            style="@style/Widget.Material3.TextInputEditText.FilledBox"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextPrompt"
+                android:layout_width="300dp"
+                android:layout_height="48dp"
+                android:layout_margin="20dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="right">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonCheckInternet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Check internet"
+                android:textSize="18sp"
+                android:layout_marginRight="14dp"
+                style="@style/Widget.Material3.Button.TextButton"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonGenerate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Generate"
+                android:textSize="18sp"
+                android:layout_marginRight="30dp"
+                style="@style/Widget.Material3.Button"/>
+        </LinearLayout>
     </LinearLayout>
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent" />
 
 
 </LinearLayout>
